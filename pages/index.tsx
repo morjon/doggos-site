@@ -22,7 +22,7 @@ const Home: NextPage = () => {
           height={160}
         />
         <div className="absolute top-20 right-12 flex flex-row-reverse">
-          <div className="font-custom font-normal text-xl">
+          <div className="font-sans font-normal text-xl">
             {/* TODO: Add navigation bar links */}
             <span className="m-10 hover:text-[#761e0b] cursor-pointer">
               About Us
@@ -40,10 +40,10 @@ const Home: NextPage = () => {
       {/* Component for the welcome text */}
       <div className="ml-16 grid grid-cols-2 gap-96 mt-40 items-center m-4">
         <div className="max-w-4xl m-2 ">
-          <h1 className="text-4xl font-custom font-bold">
+          <h1 className="text-4xl font-sans font-bold">
             Looking for some <span className="text-[#ff7931]">pawsitivity</span>
             ?
-            <h2 className="font-custom font-light text-xl mt-2">
+            <h2 className="font-sans font-light text-xl mt-2">
               Explore how a furry friend may fit into your life.
             </h2>
           </h1>
