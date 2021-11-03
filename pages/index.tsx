@@ -152,7 +152,7 @@ const Home: NextPage = () => {
                   <span className="text-[#ff7931]">pawsitivity</span>
                 </h2>
                 <p className="font-sans mt-4 text-gray-800">
-                  The pandemic was a tough time for everyone. Don't be caught
+                  The pandemic was a tough time for everyone. Do not be caught
                   alone in isolation next time and explore how a furry friend
                   can fit into your life!
                 </p>
@@ -241,7 +241,7 @@ const Home: NextPage = () => {
             </h2>
             <p className="font-sans mt-3 max-w-2xl mx-auto text-xl text-gray-800 sm:mt-4">
               Check the receipts and adventure through some of the best research
-              we've compiled spotlights all the benefits of doggo friend can
+              we have compiled spotlights all the benefits of doggo friend can
               have during socially isolated times.
             </p>
           </div>
