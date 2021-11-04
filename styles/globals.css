@@ -22,3 +22,7 @@ p {
     text-decoration: underline #F8D59B;
     text-emphasis-color: 0F1828;
 }
+
+.pad-section {
+    padding-top: 3%;
+}

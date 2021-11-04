@@ -3,11 +3,19 @@ import type { NextPage } from "next";
 import Head from "next/head";
 import Image from "next/image";
 
+import React from 'react';
+import AppBar from '@material-ui/core/AppBar';
+import Tabs from '@material-ui/core/Tabs';
+import Tab from '@material-ui/core/Tab';
+import Typography from '@material-ui/core/Typography';
+import Box from '@material-ui/core/Box';
+import { makeStyles, withStyles, Theme, createStyles } from '@material-ui/core/styles';
+
 
 const navigation = [
   { name: "Test Drive a Dog", href: "#explainer" },
   { name: "The Research", href: "#research" },
-  { name: "Adoption Options", href: "#" },
+  { name: "Adoption Options", href: "#adopt" },
   { name: "About Us", href: "#about" },
 ];
 
@@ -120,31 +128,173 @@ const people = [
   {
     name: "Megan Worrel",
     role: "M.S. Computer Science ‘22",
-    imageUrl: "/megan.png",
+    imageUrl: "https://i.ibb.co/X8VYqHx/megan.png",
   },
   {
     name: "Katherine Gjersten",
     role: "M.S. Computer Science ‘22",
-    imageUrl: "/katherine.png",
+    imageUrl: "https://i.ibb.co/RpMhwws/katherine.png",
   },
   {
     name: "Leonardo Jimenez",
     role: "B.S. Computer Science ‘22",
-    imageUrl: "/leo.png",
+    imageUrl: "https://i.ibb.co/VQJZgR2/leo.png",
   },
   {
     name: "Pierce Lowary",
     role: "B.S. Computer Science ‘22",
-    imageUrl: "/pierce.png",
+    imageUrl: "https://i.ibb.co/zrZknXf/pierce.png",
   },
   {
     name: "Jonathan Morales",
     role: "B.S. Computer Science ‘22",
-    imageUrl: "https://i.ibb.co/CVPFk3n/gradphoto2-1.png",
+    imageUrl: "https://i.ibb.co/jzmkPsQ/jonathan.png",
   },
 ];
 
+// CODE FOR TABS FOR ADOPTION SECTION 
+interface TabPanelProps {
+  children?: React.ReactNode;
+  index: any;
+  value: any;
+}
+
+function TabPanel(props: TabPanelProps) {
+  const { children, value, index, ...other } = props;
+
+  return (
+    <div
+      role="tabpanel"
+      hidden={value !== index}
+      id={`simple-tabpanel-${index}`}
+      aria-labelledby={`simple-tab-${index}`}
+      {...other}
+    >
+      {value === index && (
+        <Box p={1}>
+          <Typography>{children}</Typography>
+        </Box>
+      )}
+    </div>
+  );
+}
+
+function a11yProps(index: any) {
+  return {
+    id: `simple-tab-${index}`,
+    'aria-controls': `simple-tabpanel-${index}`,
+  };
+}
+
+const AntTabs = withStyles({
+  root: {
+    borderBottom: '1px solid #e8e8e8',
+  },
+  indicator: {
+    backgroundColor: '#1890ff',
+  },
+})(Tabs);
+
+const AntTab = withStyles((theme: Theme) =>
+  createStyles({
+    root: {
+      textTransform: 'none',
+      minWidth: 72,
+      fontWeight: theme.typography.fontWeightRegular,
+      fontFamily: [
+        '-apple-system',
+        'BlinkMacSystemFont',
+        '"Segoe UI"',
+        'Roboto',
+        '"Helvetica Neue"',
+        'Arial',
+        'sans-serif',
+        '"Apple Color Emoji"',
+        '"Segoe UI Emoji"',
+        '"Segoe UI Symbol"',
+      ].join(','),
+      '&:hover': {
+        color: '#072422',
+        opacity: 1,
+      },
+      '&$selected': {
+        color: '#072422',
+        fontWeight: theme.typography.fontWeightMedium,
+      },
+      '&:focus': {
+        color: '#072422',
+      },
+    },
+    selected: {},
+  }),
+)((props: StyledTabProps) => <Tab disableRipple {...props} />);
+
+interface StyledTabsProps {
+  value: number;
+  onChange: (event: React.ChangeEvent<{}>, newValue: number) => void;
+}
+
+const StyledTabs = withStyles({
+  indicator: {
+    display: 'flex',
+    
+    justifyContent: 'center',
+    backgroundColor: 'transparent',
+    '& > span': {
+      maxWidth: '100%',
+      width: '100%',
+      backgroundColor: '#FF7931',
+    },
+  },
+})((props: StyledTabsProps) => <Tabs {...props} TabIndicatorProps={{ children: <span /> }} />);
+
+interface StyledTabProps {
+  label: string;
+}
+
+const StyledTab = withStyles((theme: Theme) =>
+  createStyles({
+    root: {
+      textTransform: 'none',
+      color: '#072422',
+      borderBottom: '1px solid #e8e8e8',
+      fontWeight: theme.typography.fontWeightRegular,
+      fontSize: theme.typography.pxToRem(15),
+      marginRight: theme.spacing(1),
+      '&:focus': {
+        opacity: 1,
+      },
+    },
+  }),
+)((props: StyledTabProps) => <Tab disableRipple {...props} />);
+
+const useStyles = makeStyles((theme: Theme) => ({
+  root: {
+    flexGrow: 1,
+  },
+  padding: {
+    padding: theme.spacing(3),
+  },
+  demo1: {
+    backgroundColor: theme.palette.background.paper,
+  },
+  demo2: {
+    backgroundColor: '#FFFFFF',
+  },
+}));
+//END CODE FOR TABS FOR ADOPTION SECTION
+
+
+
+
 const Home: NextPage = () => {
+  //for adoption section
+  const classes = useStyles();
+  const [value, setValue] = React.useState(0);
+  const handleChange = (event: React.ChangeEvent<{}>, newValue: number) => {
+    setValue(newValue);
+  };
+
   return (
     <div className="bg-[#fff2d9]">
       {/* Component for head */}
@@ -264,9 +414,9 @@ const Home: NextPage = () => {
       {/* Component for the Explainer */}
       {/* TODO: Anchor isn't working accurately for some reason... */}
       <div id="explainer" className="bg-[#761e0b]">
-        <header className="py-10">
-          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <h1 className="text-3xl font-bold text-white">
+        <header className="py-10 pad-section">
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pad-section">
+            <h1 className="text-3xl font-bold text-white pad-section">
               Pandemic puppy adoption{" "}
               <span className="text-[#ff7931]">explained</span>
             </h1>
@@ -395,6 +545,48 @@ const Home: NextPage = () => {
               </div>
               </div>
             ))}
+          </div>
+        </div>
+      </div>
+
+      {/* Component for adoption */}
+      <div
+        id="adopt"
+        className="relative pt-16 pb-20 px-4 sm:px-6 lg:pt-24 lg:pb-28 lg:px-8"
+      >
+        <div className="absolute inset-0">
+          <div className="h-1/3 sm:h-2/3" />
+        </div>
+        <div className="relative max-w-7xl mx-auto">
+          <div className="pad-section">
+            <h2 className="dosis-font text-3xl tracking-tight font-extrabold text-gray-900 sm:text-4xl">
+              Show me the real dogs!
+            </h2>
+            <p className="titillium-web mt-4  text-gray-800 ">
+              Decided you definitely want some more puppy energy in your life? Here are some potential next steps to sniff out.
+            </p>
+          
+            <Typography className={classes.padding} />
+            
+          </div>
+                <div>
+                <div className={classes.demo2}>
+              <StyledTabs value={value} onChange={handleChange} aria-label="styled tabs example">
+                <StyledTab label="Adoption" {...a11yProps(0)}/>
+                <StyledTab label="Special Circumstances" {...a11yProps(1)} />
+                <StyledTab label="Low Commitment Puppy Time" {...a11yProps(2)}/>
+              </StyledTabs>
+                <TabPanel value={value} index={0}>
+                  Item One
+                </TabPanel>
+                <TabPanel value={value} index={1}>
+                  Item Two
+                </TabPanel>
+                <TabPanel value={value} index={2}>
+                  Item Three
+                </TabPanel>
+                <Typography className={classes.padding} />
+          </div>
           </div>
         </div>
       </div>
