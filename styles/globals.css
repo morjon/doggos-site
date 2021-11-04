@@ -18,6 +18,11 @@ p {
 
 .lim-width {
     max-width: 45%;
+
+}
+.learn-more {
+    text-align: right;
+    text-decoration: underline #F8D59B;
 }
 
 .pad-section {
@@ -49,4 +54,30 @@ p {
     flex-direction: row;
     max-width: 95%;
     justify-content: space-evenly;
+}
+
+.article-title {
+    text-align: center;
+}
+
+.img {
+    height: 100px;
+    width: auto;
+    margin: auto;
+}
+
+.benefit-box {
+    min-height: 400px;
+}
+
+.learn-more:visited {
+    color: #ff7931;
+}
+
+.learn-more:hover {
+    color: #ff7931;
+}
+
+.heading {
+    border-bottom: 2px solid #761e0b;
 }

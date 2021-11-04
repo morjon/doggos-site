@@ -19,6 +19,33 @@ const navigation = [
   { name: "About Us", href: "#about" },
 ];
 
+const articles = [
+  {
+    title: "Mental Health",
+    heading: "Dogs enhance your well-being.",
+    subheading: "...fur real.",
+    imageUrl: "https://i.ibb.co/RbrKWDy/paw-3-1-1.png",
+    summary: "Scientists have found that animals can help improve mental health, even for people with challenging disorders. Though the studies are small, the benefits are so impressive that animal-assisted clinical interventions have become increasingly common.",
+    articleLink: "https://time.com/collection/guide-to-happiness/4728315/science-says-pet-good-for-mental-health/"
+  },
+  {
+    title: "Physical Health",
+    heading: "Are you walking your dog...",
+    subheading: "or is your dog walking YOU?",
+    imageUrl: "https://i.ibb.co/LxZc7VP/paw-9-1.png",
+    summary: "Researchers have found that dog owners are more likely to reach their fitness goals, have a lower risk of diabetes (if they walk their dog regularly), and that dogs help encourage people to be more social.",
+    articleLink: "https://www.active.com/fitness/articles/are-dog-owners-healthier-people"
+  },
+  {
+    title: "Breeds for Different Needs",
+    heading: "Busy? Homebody? Stressed? Allergic?",
+    subheading: "We've got a dog for that!",
+    imageUrl: "https://i.ibb.co/SKtvK6H/paw-8-1.png",
+    summary: "There are many different dog breeds to best suit your personality and home. Some dogs are ideal for apartments dwellers, fitness enthusiasts, or even those with allergies.",
+    articleLink: "https://pets.webmd.com/dogs/adoption-21/slideshow-best-dog-breed-for-your-health"
+  }
+]
+
 const incentives = [
   {
     name: "Chase away loneliness",
@@ -281,9 +308,9 @@ const Home: NextPage = () => {
       </Head>
 
       {/* Component for logo and navigation bar */}
-      <header className="bg-[#ff7931] sticky top-0" style={{zIndex:100}}>
+      <header className="bg-[#ff7931] sticky top-0 heading" style={{zIndex:100}}>
         <nav className="max-w-l mx-auto px-4 sm:px-6 lg:px-8" aria-label="Top">
-          <div className="w-full py-2 flex items-center justify-between border-b border-[#761e0b] lg:border-none">
+          <div className="w-full py-2 flex justify-between border-b border-[#761e0b] lg:border-none">
             <div className="flex items-end">
               <a href="#">
                 <span className="sr-only">Workflow</span>
@@ -294,7 +321,7 @@ const Home: NextPage = () => {
                   height={80}
                 />
               </a>
-              <div className="hidden ml-16 space-x-20 lg:block">
+              <div className="hidden ml-40 space-x-20 lg:block">
                 {navigation.map((link) => (
                   <a
                     key={link.name}
@@ -307,7 +334,7 @@ const Home: NextPage = () => {
               </div>
             </div>
           </div>
-          <div className="py-4 flex flex-wrap justify-center space-x-6 lg:hidden">
+          <div className="py-4 flex flex-wrap space-x-6 lg:hidden">
             {navigation.map((link) => (
               <a
                 key={link.name}
@@ -409,71 +436,42 @@ const Home: NextPage = () => {
       {/* Component for additional articles */}
       <div
         id="research"
-        className="relative pt-16 pb-20 px-4 sm:px-6 lg:pt-24 lg:pb-28 lg:px-8"
+        className="relative pt-16 pb-20 px-4 sm:px-6 lg:px-8 py-10 pad-section"
       >
-        <div className="absolute inset-0">
-          <div className="h-1/3 sm:h-2/3" />
-        </div>
-        <div className="relative max-w-7xl mx-auto">
-          <div className="text-center">
-            <h2 className="dosis-font text-3xl tracking-tight font-extrabold text-gray-900 sm:text-4xl">
-              Why get a pet?
+        <div className="relative max-w-7xl mx-auto pad-section inset-0">
+          <div>
+            <h2 className="text-3xl font-bold pad-section">
+              Why get a pup?
             </h2>
-            <p className="mt-3 max-w-2xl mx-auto text-xl text-gray-800 sm:mt-4">
-              Check the receipts and adventure through some of the best research
-              we have compiled spotlights all the benefits of doggo friend can
-              have during socially isolated times.
+            <p className="mt-3 text-xl text-gray-800 sm:mt-4">
+              Check the receipts — we have compiled some of the best research
+              on the benefits your doggo friend can provide.
             </p>
           </div>
           <div className="mt-12 max-w-lg mx-auto grid gap-5 lg:grid-cols-3 lg:max-w-none">
-            {posts.map((post) => (
-              <div
-                key={post.title}
-                className="flex flex-col rounded-lg shadow-lg overflow-hidden"
-              >
-                <div className="flex-shrink-0">
-                  <img
-                    className="h-48 w-full object-cover"
-                    src={post.imageUrl}
-                    alt=""
-                  />
-                </div>
-                <div className="flex-1 bg-white p-6 flex flex-col justify-between">
+            {articles.map((article) => (
+              <div>
+                <h2 className="text-[#ff7931] article-title mb-4 text-xl" >{article.title}</h2>
+                <div className="flex-1 bg-white p-6 flex flex-col justify-between rounded-lg shadow-lg overflow-hidden benefit-box" >
+                  <div
+                    key={article.title}
+                    className="flex flex-col"
+                  >
                   <div className="flex-1">
-                    <p className="text-sm font-medium text-[#ff7931]">
-                      <a href={post.category.href} className="hover:underline">
-                        {post.category.name}
-                      </a>
-                    </p>
-                    <a href={post.href} className="block mt-2">
-                      <p className="text-xl font-semibold text-gray-900">
-                        {post.title}
-                      </p>
-                      <p className="mt-3 text-base text-gray-500">
-                        {post.description}
-                      </p>
-                    </a>
+                    <img
+                        className="object-cover img"
+                        src={article.imageUrl}
+                        alt={article.title}
+                    />
+                    <p className="text-xl mt-6 font-semibold text-gray-900">{article.heading}</p>
+                    <p className="text-med mt-1 font-medium text-[#ff7931]">{article.subheading}</p>
                   </div>
-                  <div className="mt-6 flex items-center">
-                    <div className="flex-shrink-0">
-                      <a href={post.author.href}>
-                        <span className="sr-only">{post.author.name}</span>
-                      </a>
-                    </div>
-                    <div>
-                      <p className="text-sm font-medium text-gray-900">
-                        <a href={post.author.href} className="hover:underline">
-                          {post.author.name}
-                        </a>
-                      </p>
-                      <div className="flex space-x-1 text-sm text-gray-500">
-                        <time dateTime={post.datetime}>{post.date}</time>
-                        <span aria-hidden="true">&middot;</span>
-                        <span>{post.readingTime} read</span>
+                      <div className="flex-shrink-0 mt-10 space-x-1 text-sm text-gray-500">
+                        <p>{article.summary}</p>
                       </div>
                     </div>
-                  </div>
-                </div>
+                    <a href={article.articleLink} target="_blank" rel="noopener noreferrer" className="flex-shrink-0 space-x-1 text-xs learn-more">Learn More</a>
+              </div>
               </div>
             ))}
           </div>
