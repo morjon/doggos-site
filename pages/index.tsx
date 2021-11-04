@@ -11,6 +11,7 @@ import Typography from '@material-ui/core/Typography';
 import Box from '@material-ui/core/Box';
 import Button from '@material-ui/core/Button';
 import { makeStyles, withStyles, Theme, styled, createStyles } from '@material-ui/core/styles';
+import { SYMBOL_PREVIEW_DATA } from "next/dist/server/api-utils";
 
 
 const navigation = [
@@ -273,7 +274,7 @@ const useStyles = makeStyles((theme: Theme) => ({
     padding: theme.spacing(3),
   },
   demo2: {
-    backgroundColor: '#FFFFFF',
+    backgroundColor: '#ffffff',
   },
 }));
 //END CODE FOR TABS FOR ADOPTION SECTION
@@ -285,6 +286,18 @@ const ColorButton = styled(Button)(({ theme }) => ({
   backgroundColor: "#ff7931",
   '&:hover': {
     backgroundColor: "#ff7931",
+  },
+}));
+
+const SecondaryButton = styled(Button)(({ theme }) => ({
+  color: "#0F1828",
+  fontFamily: "Dosis",
+  backgroundColor: "#FFF2DC",
+  border: 1,
+  borderStyle: "solid",
+  borderColor: "#0F1828",
+  '&:hover': {
+    backgroundColor: "#E0D0BD",
   },
 }));
 
@@ -427,7 +440,7 @@ const Home: NextPage = () => {
               During the COVID-19 pandemic, people turned to pets as a source of
               joy more than ever before. Through our pandemic puppy adoption
               explainer, you can explore how getting a pet may improve your
-              well-being during COVID & BEYOND.
+              well-being during COVID &amp; BEYOND.
             </p>
           </div>
         </header>
@@ -516,14 +529,73 @@ const Home: NextPage = () => {
                 {/* <StyledTab label="Special Circumstances" {...a11yProps(2)}/> */}
               </StyledTabs>
                 <TabPanel value={value} index={0}>
-                  Item One
+                <div className="adopt-box">
+                    <div >
+                      <span className="low-com-blurb"> <b> Can't wait to meet your furry little friend? </b> 
+                      <br/> Although you can purchase a pup from a pet store or a dog breeder, adopting from an animal shelter is often much more <br/> affordable and gives you the opportunity to provide a lonely pup with a loving home. 
+                      Get your adoption journey rolling by <br/> exploring different breeds and finding dogs that need homes near you. </span>
+                      
+                      <div className="card-container-adopt">
+                        <span className="bound-width">
+                        <div className="flex flex-col rounded-lg shadow-lg overflow-hidden lim-width">
+                          <img src="https://i.ibb.co/NLqRD2C/labsterriers.png" alt="lab, terrier, and a beagle illustration" />
+                            <div className="flex-1 bg-white p-6 flex flex-col justify-between">
+                              <div className="flex-1">
+                                <p className="dosis text-xl font-bold text-[#ff7931]"> Labs &amp; Terriers &amp; Beagles, Oh My! </p>
+                                  <a className="block mt-2">
+                                    <p className="text-base font-semibold text-gray-900">
+                                      Let's do some research to figure out the best dog for you.
+                                    </p>
+                                    <p className="mt-3 text-sm  text-gray-500">
+                                      Apps exist to connect dog lovers with nearby pups. Over 350k people in the US have used <a href="https://wagwalking.com/dog-walker" target="_blank" rel="noopener noreferrer" className="learn-more-2">Wag!</a> as dog caregivers. Get paid to frolick with dogs along the 
+                                      beach, or dog sit for a cozy weekend. People of all ages can be walkers, but it's especially popular among college students. Checkout the 
+                                      walkers on <a target="_blank" rel="noopener noreferrer" href="https://www.rover.com/search/?utm_medium=cpc&utm_source=google&utm_campaign=2075656795&utm_content=75641159439_372690258136_CjwKCAjwiY6MBhBqEiwARFSCPoCciH1UAMP5XiAD6ELE6FqOS7E5JdlCQUJcZiBe3EJEL9-kmCdyQhoC8zUQAvD_BwE&utm_term=+dog%20+walker_b&gclid=CjwKCAjwiY6MBhBqEiwARFSCPoCciH1UAMP5XiAD6ELE6FqOS7E5JdlCQUJcZiBe3EJEL9-kmCdyQhoC8zUQAvD_BwE&alternate_results=true&override_check=true&accepts_only_one_client=false&adwordslocation=9031970&apse=false&bathing_grooming=false&cat_care=false&centerlat=37.427039&centerlng=-122.164960&dogs_allowed_on_bed=false&dogs_allowed_on_furniture=false&frequency=onetime&fulltime_availability=true&giant_dogs=false&has_fenced_yard=false&has_house=false&has_no_children=false&is_premier=false&knows_first_aid=false&large_dogs=false&location=94305&location_accuracy=5161&maxprice=150&medium_dogs=false&minprice=1&no_caged_pets=false&no_cats=false&no_children_0_5=false&no_children_6_12=false&non_smoking=false&page=1&person_does_not_have_dogs=false&pet=&petsitusa=false&pet_type=dog&puppy=false&service_type=dog-walking&small_dogs=false&search_score_debug=false&injected_medication=false&special_needs=false&oral_medication=false&more_than_one_client=false&uncrated_dogs=false&unspayed_females=false&non_neutered_males=false&females_in_heat=false&unactivated_provider=false&premier_matching=false&premier_or_rover_match=false&is_member_of_sitter_to_sitter=false&is_member_of_sitter_to_sitter_plus=false&location_type=adwords&midday_availability=true" className="learn-more-2"> Rover near Stanford </a> to see the Cardinal well represented!
+                                    </p>
+                                  </a>
+                                </div>
+                                <p className="shelter-button">
+                                <ColorButton variant="contained"  onClick={() => { window.open('https://www.rover.com/become-a-sitter/', '_blank');}} > Play With Pups for $$</ColorButton>
+                                </p>
+                            </div>
+                          </div>
+
+                          <div className="flex flex-col rounded-lg shadow-lg overflow-hidden lim-width">
+                            <img src="https://i.ibb.co/N3hpTS2/adoptdogs.png" />
+                            <div className="flex-1 bg-white p-6 flex flex-col justify-between">
+                              <div className="flex-1">
+                                <p className="dosis text-xl font-bold text-[#ff7931]"> Do Good, Feel Good </p>
+                                  <a className="block mt-2 mb-3">
+                                    <p className="text-base font-semibold text-gray-900">
+                                      Volunteer at a local pet shelter or with a rescue organization.
+                                    </p>
+                                    <p className="mt-3 text-sm text-gray-500">
+                                      You can get involved in your local community and help out doggos in need through volunteer work. Volunteer programs can vary 
+                                      by shelter and can include anything from drop-in <a target="_blank" rel="noopener noreferrer" className="learn-more-2" href="https://www.spcamc.org/how-to-help/volunteer/title/hug-a-pet"> "hug a pet" </a> 
+                                      programs to <a target="_blank" rel="noopener noreferrer" className="learn-more-2"  href="https://www.sfspca.org/get-involved/volunteer/info-sessions-calendar/">weekly commitments</a> to at-home <a target="_blank" rel="noopener noreferrer" className="learn-more-2" href="https://www.hssv.org/volunteer/foster-an-animal/#fosterdogpuppy">dog fostering </a> programs. The right program for you may depend on 
+                                      your experience and comfort working with rescue pups. 
+                                    </p>
+                                  </a>
+                                </div>
+                                <p className="shelter-button">
+                                <ColorButton variant="contained"  onClick={() => { window.open('https://www.petfinder.com/animal-shelters-and-rescues/search/', '_blank');}} >Find A Nearby Shelter</ColorButton>
+                                </p>
+                            </div>
+                          </div>
+                          </span>
+                          <div className="checklist">
+                              <img  src="https://i.ibb.co/QP2t3tQ/adoption-checklist.png" alt="adoption checklist"/>
+                              <SecondaryButton className="checklist-button" onClick={() => { window.open('https://www.petfinder.com/pet-adoption/dog-adoption/dog-adoption-checklist/', '_blank');}}>More checklist items </SecondaryButton>
+                            </div>
+                        </div>
+                    </div>
+                  </div>
                 </TabPanel>
                 <TabPanel value={value} index={1}>
                   <div className="low-com-box">
                     <div >
-                      <span className="low-com-blurb"> Adopting a pup is not a decision that should be made lightly. Owning a dog represents
+                      <span className="low-com-blurb"> <b>Let's keep the relationship low-key for now. </b> <br/>Adopting a pup is not a decision that should be made lightly. Owning a dog represents
                         an important commitment of time, money, and energy. Even if adopting isn't the right choice for you now, 
-                        <b> there are other ways to get the benefits and wellbeing boosts from some puppy love! </b> </span>
+                        <b> there are other ways to get the benefits and wellbeing boosts from some puppy love! </b> <br/> </span>
                       
                       <div className="card-container">
 
@@ -561,7 +633,7 @@ const Home: NextPage = () => {
                                     <p className="mt-3 text-sm text-gray-500">
                                       You can get involved in your local community and help out doggos in need through volunteer work. Volunteer programs can vary 
                                       by shelter and can include anything from drop-in <a target="_blank" rel="noopener noreferrer" className="learn-more-2" href="https://www.spcamc.org/how-to-help/volunteer/title/hug-a-pet"> "hug a pet" </a> 
-                                      programs to <a target="_blank" rel="noopener noreferrer" className="learn-more-2"  href="https://www.sfspca.org/get-involved/volunteer/info-sessions-calendar/">weekly commitments</a> to at-home <a target="_blank" rel="noopener noreferrer" className="learn-more-2" href="https://www.hssv.org/volunteer/foster-an-animal/#fosterdogpuppy">dog fostering </a> programs. What program is right for you may depend on 
+                                      programs to <a target="_blank" rel="noopener noreferrer" className="learn-more-2"  href="https://www.sfspca.org/get-involved/volunteer/info-sessions-calendar/">weekly commitments</a> to at-home <a target="_blank" rel="noopener noreferrer" className="learn-more-2" href="https://www.hssv.org/volunteer/foster-an-animal/#fosterdogpuppy">dog fostering </a> programs. The right program for you may depend on 
                                       your experience and comfort working with rescue pups. 
                                     </p>
                                   </a>
