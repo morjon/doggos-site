@@ -526,7 +526,7 @@ const Home: NextPage = () => {
               <StyledTabs value={value} onChange={handleChange} aria-label="styled tabs example">
                 <StyledTab label="Adoption" {...a11yProps(0)}/>
                 <StyledTab label="Low Commitment Puppy Time" {...a11yProps(1)} />
-                {/* <StyledTab label="Special Circumstances" {...a11yProps(2)}/> */}
+                
               </StyledTabs>
                 <TabPanel value={value} index={0}>
                 <div className="adopt-box">
@@ -544,17 +544,17 @@ const Home: NextPage = () => {
                                 <p className="dosis text-xl font-bold text-[#ff7931]"> Labs &amp; Terriers &amp; Beagles, Oh My! </p>
                                   <a className="block mt-2">
                                     <p className="text-base font-semibold text-gray-900">
-                                      Let's do some research to figure out the best dog for you.
+                                      Let's do some digging to figure out the best dog for you.
                                     </p>
                                     <p className="mt-3 text-sm  text-gray-500">
-                                      Apps exist to connect dog lovers with nearby pups. Over 350k people in the US have used <a href="https://wagwalking.com/dog-walker" target="_blank" rel="noopener noreferrer" className="learn-more-2">Wag!</a> as dog caregivers. Get paid to frolick with dogs along the 
-                                      beach, or dog sit for a cozy weekend. People of all ages can be walkers, but it's especially popular among college students. Checkout the 
-                                      walkers on <a target="_blank" rel="noopener noreferrer" href="https://www.rover.com/search/?utm_medium=cpc&utm_source=google&utm_campaign=2075656795&utm_content=75641159439_372690258136_CjwKCAjwiY6MBhBqEiwARFSCPoCciH1UAMP5XiAD6ELE6FqOS7E5JdlCQUJcZiBe3EJEL9-kmCdyQhoC8zUQAvD_BwE&utm_term=+dog%20+walker_b&gclid=CjwKCAjwiY6MBhBqEiwARFSCPoCciH1UAMP5XiAD6ELE6FqOS7E5JdlCQUJcZiBe3EJEL9-kmCdyQhoC8zUQAvD_BwE&alternate_results=true&override_check=true&accepts_only_one_client=false&adwordslocation=9031970&apse=false&bathing_grooming=false&cat_care=false&centerlat=37.427039&centerlng=-122.164960&dogs_allowed_on_bed=false&dogs_allowed_on_furniture=false&frequency=onetime&fulltime_availability=true&giant_dogs=false&has_fenced_yard=false&has_house=false&has_no_children=false&is_premier=false&knows_first_aid=false&large_dogs=false&location=94305&location_accuracy=5161&maxprice=150&medium_dogs=false&minprice=1&no_caged_pets=false&no_cats=false&no_children_0_5=false&no_children_6_12=false&non_smoking=false&page=1&person_does_not_have_dogs=false&pet=&petsitusa=false&pet_type=dog&puppy=false&service_type=dog-walking&small_dogs=false&search_score_debug=false&injected_medication=false&special_needs=false&oral_medication=false&more_than_one_client=false&uncrated_dogs=false&unspayed_females=false&non_neutered_males=false&females_in_heat=false&unactivated_provider=false&premier_matching=false&premier_or_rover_match=false&is_member_of_sitter_to_sitter=false&is_member_of_sitter_to_sitter_plus=false&location_type=adwords&midday_availability=true" className="learn-more-2"> Rover near Stanford </a> to see the Cardinal well represented!
+                                      Explore the <a className="learn-more-2" target="_blank" rel="noopener noreferrer" href="https://www.akc.org/dog-breeds/">database of breeds</a> from the American Kennel Club to get a feel for all the kinds of 
+                                      pups that are out there. Check out the range of personalities, and see how they match up with other factors you may 
+                                      care about like shedding, barking, and size. To many variables to keep straight? Take the Kennel Club's breed matching quiz for more insights. 
                                     </p>
                                   </a>
                                 </div>
                                 <p className="shelter-button">
-                                <ColorButton variant="contained"  onClick={() => { window.open('https://www.rover.com/become-a-sitter/', '_blank');}} > Play With Pups for $$</ColorButton>
+                                <ColorButton variant="contained"  onClick={() => { window.open('https://www.akc.org/dog-breed-selector/', '_blank');}} > Breed Matching Quiz</ColorButton>
                                 </p>
                             </div>
                           </div>
@@ -563,21 +563,20 @@ const Home: NextPage = () => {
                             <img src="https://i.ibb.co/N3hpTS2/adoptdogs.png" />
                             <div className="flex-1 bg-white p-6 flex flex-col justify-between">
                               <div className="flex-1">
-                                <p className="dosis text-xl font-bold text-[#ff7931]"> Do Good, Feel Good </p>
+                                <p className="dosis text-xl font-bold text-[#ff7931]"> Scour Shelters Near You in Seconds </p>
                                   <a className="block mt-2 mb-3">
                                     <p className="text-base font-semibold text-gray-900">
-                                      Volunteer at a local pet shelter or with a rescue organization.
+                                      Shelters publish pups for adoption online- expedite your search by starting remotely. 
                                     </p>
                                     <p className="mt-3 text-sm text-gray-500">
-                                      You can get involved in your local community and help out doggos in need through volunteer work. Volunteer programs can vary 
-                                      by shelter and can include anything from drop-in <a target="_blank" rel="noopener noreferrer" className="learn-more-2" href="https://www.spcamc.org/how-to-help/volunteer/title/hug-a-pet"> "hug a pet" </a> 
-                                      programs to <a target="_blank" rel="noopener noreferrer" className="learn-more-2"  href="https://www.sfspca.org/get-involved/volunteer/info-sessions-calendar/">weekly commitments</a> to at-home <a target="_blank" rel="noopener noreferrer" className="learn-more-2" href="https://www.hssv.org/volunteer/foster-an-animal/#fosterdogpuppy">dog fostering </a> programs. The right program for you may depend on 
-                                      your experience and comfort working with rescue pups. 
+                                      Tools that aggregate dogs for adoption across animal welfare groups, rescue teams, and pet shelters are particularly helpful for 
+                                      quickly identifying potential pups. Filter for dogs who fit your lifestyle, make a shortlist, and then start meeting them in person to see if there 
+                                      is a match!
                                     </p>
                                   </a>
                                 </div>
                                 <p className="shelter-button">
-                                <ColorButton variant="contained"  onClick={() => { window.open('https://www.petfinder.com/animal-shelters-and-rescues/search/', '_blank');}} >Find A Nearby Shelter</ColorButton>
+                                <ColorButton variant="contained"  onClick={() => { window.open('https://www.petfinder.com/search/dogs-for-adoption/us/ca/stanford/?sort%5B0%5D=recently_added', '_blank');}} >Nearby Pups to Adopt</ColorButton>
                                 </p>
                             </div>
                           </div>
