@@ -504,8 +504,8 @@ const Home: NextPage = () => {
                 <div className={classes.demo2}>
               <StyledTabs value={value} onChange={handleChange} aria-label="styled tabs example">
                 <StyledTab label="Adoption" {...a11yProps(0)}/>
-                <StyledTab label="Special Circumstances" {...a11yProps(1)} />
-                <StyledTab label="Low Commitment Puppy Time" {...a11yProps(2)}/>
+                <StyledTab label="Low Commitment Puppy Time" {...a11yProps(1)} />
+                {/* <StyledTab label="Special Circumstances" {...a11yProps(2)}/> */}
               </StyledTabs>
                 <TabPanel value={value} index={0}>
                   Item One
@@ -513,9 +513,9 @@ const Home: NextPage = () => {
                 <TabPanel value={value} index={1}>
                   Item Two
                 </TabPanel>
-                <TabPanel value={value} index={2}>
+                {/* <TabPanel value={value} index={2}>
                   Item Three
-                </TabPanel>
+                </TabPanel> */}
                 <Typography className={classes.padding} />
           </div>
           </div>
