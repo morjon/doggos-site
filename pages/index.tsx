@@ -93,22 +93,22 @@ const people = [
   {
     name: "Megan Worrel",
     role: "M.S. Computer Science ‘22",
-    imageUrl: "/megan.png",
+    imageUrl: "https://i.ibb.co/X8VYqHx/megan.png",
   },
   {
     name: "Katherine Gjersten",
     role: "M.S. Computer Science ‘22",
-    imageUrl: "/katherine.png",
+    imageUrl: "https://i.ibb.co/RpMhwws/katherine.png",
   },
   {
     name: "Leonardo Jimenez",
     role: "B.S. Computer Science ‘22",
-    imageUrl: "/leo.png",
+    imageUrl: "https://i.ibb.co/VQJZgR2/leo.png",
   },
   {
     name: "Pierce Lowary",
     role: "B.S. Computer Science ‘22",
-    imageUrl: "/pierce.png",
+    imageUrl: "https://i.ibb.co/zrZknXf/pierce.png",
   },
   {
     name: "Jonathan Morales",
