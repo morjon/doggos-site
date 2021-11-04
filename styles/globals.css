@@ -26,3 +26,13 @@ p {
 .pad-section {
     padding-top: 3%;
 }
+
+.article-title {
+    text-align: center;
+}
+
+.img {
+    height: 100px;
+    width: auto;
+    margin: auto;
+}
