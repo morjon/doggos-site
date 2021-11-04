@@ -25,6 +25,18 @@ p {
     text-decoration: underline #F8D59B;
 }
 
+.shelter-button{
+    max-width: 60%;
+    min-width: 60%;
+}
+
+.learn-more-2 {
+    text-align: right;
+    text-decoration: underline;
+    text-decoration-color: #F8D59B;
+    font-weight: bold;
+}
+
 .pad-section {
     padding-top: 3%;
 }
