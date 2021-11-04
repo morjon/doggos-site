@@ -19,7 +19,6 @@ p {
 .learn-more {
     text-align: right;
     text-decoration: underline #F8D59B;
-    text-emphasis-color: 0F1828;
 }
 
 .pad-section {
@@ -38,4 +37,12 @@ p {
 
 .benefit-box {
     min-height: 400px;
+}
+
+.learn-more:visited {
+    color: #ff7931;
+}
+
+.learn-more:hover {
+    color: #ff7931;
 }

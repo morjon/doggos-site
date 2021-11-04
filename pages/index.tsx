@@ -470,7 +470,7 @@ const Home: NextPage = () => {
                         <p>{article.summary}</p>
                       </div>
                     </div>
-                    <a href={article.articleLink} target="_blank" rel="noopener noreferrer"><p className="flex-shrink-0 space-x-1 text-xs learn-more">Learn More</p></a>
+                    <a href={article.articleLink} target="_blank" rel="noopener noreferrer" className="flex-shrink-0 space-x-1 text-xs learn-more">Learn More</a>
               </div>
               </div>
             ))}
