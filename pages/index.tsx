@@ -199,19 +199,11 @@ const AntTab = withStyles((theme: Theme) =>
   createStyles({
     root: {
       textTransform: 'none',
-      minWidth: 72,
-      fontWeight: theme.typography.fontWeightRegular,
+      minWidth: 92,
+      fontWeight: theme.typography.fontWeightBold,
       fontFamily: [
-        '-apple-system',
-        'BlinkMacSystemFont',
-        '"Segoe UI"',
-        'Roboto',
-        '"Helvetica Neue"',
-        'Arial',
-        'sans-serif',
-        '"Apple Color Emoji"',
-        '"Segoe UI Emoji"',
-        '"Segoe UI Symbol"',
+        'Dosis',
+        'sans-serif'
       ].join(','),
       '&:hover': {
         color: '#072422',
@@ -219,7 +211,7 @@ const AntTab = withStyles((theme: Theme) =>
       },
       '&$selected': {
         color: '#072422',
-        fontWeight: theme.typography.fontWeightMedium,
+        fontWeight: theme.typography.fontWeightBold,
       },
       '&:focus': {
         color: '#072422',
@@ -237,13 +229,14 @@ interface StyledTabsProps {
 const StyledTabs = withStyles({
   indicator: {
     display: 'flex',
-    
+    fontFamily: 'Dosis',
     justifyContent: 'center',
     backgroundColor: 'transparent',
     '& > span': {
       maxWidth: '100%',
       width: '100%',
       backgroundColor: '#FF7931',
+      fontWeight: "bold",
     },
   },
 })((props: StyledTabsProps) => <Tabs {...props} TabIndicatorProps={{ children: <span /> }} />);
@@ -258,11 +251,14 @@ const StyledTab = withStyles((theme: Theme) =>
       textTransform: 'none',
       color: '#072422',
       borderBottom: '1px solid #e8e8e8',
-      fontWeight: theme.typography.fontWeightRegular,
-      fontSize: theme.typography.pxToRem(15),
+      fontFamily: 'Dosis',
+      fontWeight: theme.typography.fontWeightBold,
+      
+      fontSize: theme.typography.pxToRem(18),
       marginRight: theme.spacing(1),
       '&:focus': {
         opacity: 1,
+        fontWeight: theme.typography.fontWeightBold,
       },
     },
   }),
@@ -274,9 +270,6 @@ const useStyles = makeStyles((theme: Theme) => ({
   },
   padding: {
     padding: theme.spacing(3),
-  },
-  demo1: {
-    backgroundColor: theme.palette.background.paper,
   },
   demo2: {
     backgroundColor: '#FFFFFF',
@@ -573,8 +566,8 @@ const Home: NextPage = () => {
                 <div className={classes.demo2}>
               <StyledTabs value={value} onChange={handleChange} aria-label="styled tabs example">
                 <StyledTab label="Adoption" {...a11yProps(0)}/>
-                <StyledTab label="Special Circumstances" {...a11yProps(1)} />
-                <StyledTab label="Low Commitment Puppy Time" {...a11yProps(2)}/>
+                <StyledTab label="Low Commitment Puppy Time" {...a11yProps(1)} />
+                {/* <StyledTab label="Special Circumstances" {...a11yProps(2)}/> */}
               </StyledTabs>
                 <TabPanel value={value} index={0}>
                   Item One
@@ -582,9 +575,9 @@ const Home: NextPage = () => {
                 <TabPanel value={value} index={1}>
                   Item Two
                 </TabPanel>
-                <TabPanel value={value} index={2}>
+                {/* <TabPanel value={value} index={2}>
                   Item Three
-                </TabPanel>
+                </TabPanel> */}
                 <Typography className={classes.padding} />
           </div>
           </div>
