@@ -350,15 +350,14 @@ const Home: NextPage = () => {
           <div className="w-full py-2 flex justify-between border-b border-[#761e0b] lg:border-none">
             <div className="flex items-end">
               <a href="#">
-                <span className="sr-only">Workflow</span>
                 <Image
                   src="/logo_pup_or_not.svg"
                   alt="Our logo"
-                  width={200}
+                  width={100}
                   height={80}
                 />
               </a>
-              <div className="hidden ml-40 space-x-20 lg:block">
+              <div className="hidden ml-40 nav-elem space-x-20 lg:block">
                 {navigation.map((link) => (
                   <a
                     key={link.name}
@@ -442,10 +441,10 @@ const Home: NextPage = () => {
       <div id="explainer" className="bg-[#761e0b]">
         <header className="py-10 pad-section">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pad-section">
-            <h1 className="text-3xl font-bold text-white pad-section">
+            <h1 className="text-3xl font-bold text-[#FFF2DC] pad-section">
               Test Drive a Dog <span className="text-[#ff7931]"></span>
             </h1>
-            <p className="titillium-web mt-4 text-white">
+            <p className="titillium-web mt-4 text-xl text-[#FFF2DC]">
               During the COVID-19 pandemic, people turned to pets as a source of
               joy more than ever before. Through our pandemic puppy adoption
               explainer, you can explore how getting a pet may improve your
@@ -531,7 +530,7 @@ const Home: NextPage = () => {
             <h2 className="dosis-font text-3xl tracking-tight font-extrabold text-gray-900 sm:text-4xl">
               Show me the real pups!
             </h2>
-            <p className="titillium-web mt-4  text-gray-800 ">
+            <p className="titillium-web mt-4  text-xl text-gray-800 ">
               Decided you definitely want some more puppy energy in your life?
               Here are some potential next steps to sniff out.
             </p>
@@ -849,16 +848,16 @@ const Home: NextPage = () => {
       <div id="about" className="bg-[#761e0b]">
         <div className="max-w-7xl mx-auto py-12 px-4 sm:px-6 lg:px-8 lg:py-24">
           <div className="space-y-12">
-            <div className="space-y-5 sm:mx-auto sm:max-w-xl sm:space-y-4 lg:max-w-5xl">
-              <h2 className="text-[#ff7931] text-3xl font-extrabold tracking-tight sm:text-4xl">
+          <h2 className="text-[#ff7931] text-3xl font-extrabold tracking-tight sm:text-4xl">
                 About Us
               </h2>
               <p className="text-xl text-white">
                 We are a team of Stanford Computer Science students excited to
                 share how relationships with animals can promote human
                 happiness. This project emerged from the course CS 247I: Design
-                for Understanding
+                for Understanding.
               </p>
+            <div className="space-y-5 sm:mx-auto sm:max-w-xl sm:space-y-4 lg:max-w-5xl">
             </div>
             <ul
               role="list"
