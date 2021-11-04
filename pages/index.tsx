@@ -23,7 +23,7 @@ import { SYMBOL_PREVIEW_DATA } from "next/dist/server/api-utils";
 const navigation = [
   { name: "Test Drive a Dog", href: "#explainer" },
   { name: "The Research", href: "#research" },
-  { name: "Adoption Options", href: "#adopt" },
+  { name: "Find a Real Pup", href: "#adopt" },
   { name: "About Us", href: "#about" },
 ];
 
@@ -531,7 +531,7 @@ const Home: NextPage = () => {
         <div className="relative max-w-7xl mx-auto">
           <div className="pad-section">
             <h2 className="dosis-font text-3xl tracking-tight font-extrabold text-gray-900 sm:text-4xl">
-              Show me the real dogs!
+              Show me the real pups!
             </h2>
             <p className="titillium-web mt-4  text-gray-800 ">
               Decided you definitely want some more puppy energy in your life?
