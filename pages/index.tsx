@@ -308,9 +308,9 @@ const Home: NextPage = () => {
       </Head>
 
       {/* Component for logo and navigation bar */}
-      <header className="bg-[#ff7931] sticky top-0" style={{zIndex:100}}>
+      <header className="bg-[#ff7931] sticky top-0 heading" style={{zIndex:100}}>
         <nav className="max-w-l mx-auto px-4 sm:px-6 lg:px-8" aria-label="Top">
-          <div className="w-full py-2 flex items-center justify-between border-b border-[#761e0b] lg:border-none">
+          <div className="w-full py-2 flex justify-between border-b border-[#761e0b] lg:border-none">
             <div className="flex items-end">
               <a href="#">
                 <span className="sr-only">Workflow</span>
@@ -321,7 +321,7 @@ const Home: NextPage = () => {
                   height={80}
                 />
               </a>
-              <div className="hidden ml-16 space-x-20 lg:block">
+              <div className="hidden ml-40 space-x-20 lg:block">
                 {navigation.map((link) => (
                   <a
                     key={link.name}
@@ -334,7 +334,7 @@ const Home: NextPage = () => {
               </div>
             </div>
           </div>
-          <div className="py-4 flex flex-wrap justify-center space-x-6 lg:hidden">
+          <div className="py-4 flex flex-wrap space-x-6 lg:hidden">
             {navigation.map((link) => (
               <a
                 key={link.name}

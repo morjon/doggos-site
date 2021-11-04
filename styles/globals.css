@@ -46,3 +46,7 @@ p {
 .learn-more:hover {
     color: #ff7931;
 }
+
+.heading {
+    border-bottom: 2px solid #761e0b;
+}
