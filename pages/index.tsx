@@ -392,13 +392,11 @@ const Home: NextPage = () => {
             <div className="grid grid-cols-1 items-center gap-y-10 gap-x-16 lg:grid-cols-2">
               <div>
                 <h2 className="text-4xl font-extrabold tracking-tight text-gray-900">
-                  Get ready for some{" "}
-                  <span className="text-[#ff7931]">pawsitivity</span>
+                  Looking for some{" "}
+                  <span className="text-[#ff7931]">pawsitivity?</span>
                 </h2>
                 <p className="titillium-web mt-4 text-gray-800">
-                  The pandemic was a tough time for everyone. Do not be caught
-                  alone in isolation next time and explore how a furry friend
-                  can fit into your life!
+                  Check out how a furry friend may enhance your life!
                 </p>
               </div>
               <div className="aspect-w-3 aspect-h-2 overflow-hidden pl-36">
