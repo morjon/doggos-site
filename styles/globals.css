@@ -15,3 +15,7 @@ p {
 .push {
     justify-content: end
 }
+
+.pad-section {
+    padding-top: 3%;
+}
