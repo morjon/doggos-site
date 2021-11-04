@@ -3,8 +3,9 @@ import type { NextPage } from "next";
 import Head from "next/head";
 import Image from "next/image";
 
+
 const navigation = [
-  { name: "Interactive Exploration", href: "#explainer" },
+  { name: "Test Drive a Dog", href: "#explainer" },
   { name: "The Research", href: "#research" },
   { name: "Adoption Options", href: "#" },
   { name: "About Us", href: "#about" },
@@ -89,6 +90,31 @@ const people = [
     role: "M.S. Computer Science ‘22",
     imageUrl: "https://i.ibb.co/CVPFk3n/gradphoto2-1.png",
   },
+  {
+    name: "Megan Worrel",
+    role: "M.S. Computer Science ‘22",
+    imageUrl: "/megan.png",
+  },
+  {
+    name: "Katherine Gjersten",
+    role: "M.S. Computer Science ‘22",
+    imageUrl: "/katherine.png",
+  },
+  {
+    name: "Leonardo Jimenez",
+    role: "B.S. Computer Science ‘22",
+    imageUrl: "/leo.png",
+  },
+  {
+    name: "Pierce Lowary",
+    role: "B.S. Computer Science ‘22",
+    imageUrl: "/pierce.png",
+  },
+  {
+    name: "Jonathan Morales",
+    role: "B.S. Computer Science ‘22",
+    imageUrl: "https://i.ibb.co/CVPFk3n/gradphoto2-1.png",
+  },
 ];
 
 const Home: NextPage = () => {
@@ -98,19 +124,30 @@ const Home: NextPage = () => {
       <Head>
         <title>Pup or Not</title>
         <meta name="title" content="home page" />
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link href="https://fonts.googleapis.com/css2?family=Dosis&display=swap" 
+              rel="stylesheet"
+        />
+        <link
+          href="https://fonts.googleapis.com/css2?family=Inter&display=optional"
+          rel="stylesheet"
+        />
+        <link href="https://fonts.googleapis.com/css2?family=Dosis:wght@400;700&family=Titillium+Web&display=swap" 
+              rel="stylesheet" 
+        />
       </Head>
 
       {/* Component for logo and navigation bar */}
-      <header className="bg-[#ff7931] sticky top-0">
+      <header className="bg-[#ff7931] sticky top-0" style={{zIndex:100}}>
         <nav className="max-w-l mx-auto px-4 sm:px-6 lg:px-8" aria-label="Top">
           <div className="w-full py-2 flex items-center justify-between border-b border-[#761e0b] lg:border-none">
-            <div className="flex items-center">
+            <div className="flex items-end">
               <a href="#">
                 <span className="sr-only">Workflow</span>
                 <Image
-                  src="/logo-2.svg"
+                  src="/logo_pup_or_not.svg"
                   alt="Our logo"
-                  width={80}
+                  width={200}
                   height={80}
                 />
               </a>
@@ -119,7 +156,7 @@ const Home: NextPage = () => {
                   <a
                     key={link.name}
                     href={link.href}
-                    className="font-sans text-xl text-white hover:text-[#761e0b]"
+                    className="dosis text-xl text-white hover:text-[#761e0b]"
                   >
                     {link.name}
                   </a>
@@ -132,7 +169,7 @@ const Home: NextPage = () => {
               <a
                 key={link.name}
                 href={link.href}
-                className="font-sans text-base font-large text-white hover:text-[#761e0b]"
+                className="text-base font-large text-white hover:text-[#761e0b]"
               >
                 {link.name}
               </a>
@@ -147,11 +184,11 @@ const Home: NextPage = () => {
           <div className="max-w-2xl mx-auto px-4 lg:max-w-none">
             <div className="grid grid-cols-1 items-center gap-y-10 gap-x-16 lg:grid-cols-2">
               <div>
-                <h2 className="font-sans text-4xl font-extrabold tracking-tight text-gray-900">
+                <h2 className="text-4xl font-extrabold tracking-tight text-gray-900">
                   Get ready for some{" "}
                   <span className="text-[#ff7931]">pawsitivity</span>
                 </h2>
-                <p className="font-sans mt-4 text-gray-800">
+                <p className="titillium-web mt-4 text-gray-800">
                   The pandemic was a tough time for everyone. Do not be caught
                   alone in isolation next time and explore how a furry friend
                   can fit into your life!
@@ -183,10 +220,10 @@ const Home: NextPage = () => {
                     />
                   </div>
                   <div className="mt-4 sm:mt-0 sm:ml-6 lg:mt-6 lg:ml-0">
-                    <h3 className="text-sm font-sans text-gray-900">
+                    <h3 className="text-sm text-gray-900">
                       {incentive.name}
                     </h3>
-                    <p className="font-sans mt-2 text-sm text-gray-500">
+                    <p className="mt-2 text-sm text-gray-500">
                       {incentive.description}
                     </p>
                   </div>
@@ -202,11 +239,11 @@ const Home: NextPage = () => {
       <div id="explainer" className="bg-[#761e0b]">
         <header className="py-10">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <h1 className="font-sans text-3xl font-bold text-white">
+            <h1 className="text-3xl font-bold text-white">
               Pandemic puppy adoption{" "}
               <span className="text-[#ff7931]">explained</span>
             </h1>
-            <p className="font-sans mt-4 text-white">
+            <p className="titillium-web mt-4 text-white">
               During the COVID-19 pandemic, people turned to pets as a source of
               joy more than ever before. Through our pandemic puppy adoption
               explainer, you can explore how getting a pet may improve your
@@ -236,10 +273,10 @@ const Home: NextPage = () => {
         </div>
         <div className="relative max-w-7xl mx-auto">
           <div className="text-center">
-            <h2 className="font-sans text-3xl tracking-tight font-extrabold text-gray-900 sm:text-4xl">
-              Still Not Convinced?
+            <h2 className="dosis-font text-3xl tracking-tight font-extrabold text-gray-900 sm:text-4xl">
+              Why get a pet?
             </h2>
-            <p className="font-sans mt-3 max-w-2xl mx-auto text-xl text-gray-800 sm:mt-4">
+            <p className="mt-3 max-w-2xl mx-auto text-xl text-gray-800 sm:mt-4">
               Check the receipts and adventure through some of the best research
               we have compiled spotlights all the benefits of doggo friend can
               have during socially isolated times.

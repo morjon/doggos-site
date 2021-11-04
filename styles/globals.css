@@ -1,2 +1,17 @@
 /* Font family */
-@import url("https://fonts.googleapis.com/css2?family=Dosis:wght@300;400;700&display=swap");
+h1, h2, h3, h4, h5, h6 {
+    font-family: 'Dosis', sans-serif;
+    font-weight: bold;
+}
+
+.dosis {
+    font-family: 'Dosis', sans-serif;
+}
+
+p {
+    font-family: 'Titillium Web', sans-serif;
+}
+
+.push {
+    justify-content: end
+}
