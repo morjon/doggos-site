@@ -500,7 +500,7 @@ const Home: NextPage = () => {
           <div>
             <h2 className="text-3xl font-bold pad-section">Why get a pup?</h2>
             <p className="mt-3 text-xl text-gray-800 sm:mt-4">
-              Check the receipts — we have compiled some of the best research on
+              Chew on this. We have compiled some of the best research on
               the benefits your doggo friend can provide.
             </p>
           </div>
