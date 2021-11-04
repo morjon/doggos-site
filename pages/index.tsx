@@ -40,11 +40,38 @@ const articles = [
   },
   {
     title: "Breeds for Different Needs",
-    heading: "Busy? Homebody? Stressed? Allergic?",
+    heading: "Busy? Homebody? Allergic?",
     subheading: "We've got a dog for that!",
     imageUrl: "https://i.ibb.co/SKtvK6H/paw-8-1.png",
     summary: "There are many different dog breeds to best suit your personality and home. Some dogs are ideal for apartments dwellers, fitness enthusiasts, or even those with allergies.",
     articleLink: "https://pets.webmd.com/dogs/adoption-21/slideshow-best-dog-breed-for-your-health"
+  }
+]
+
+const costs = [
+  {
+    title: "Money",
+    heading: "Dogs don't cost a fur-tune",
+    subheading: "...but they're not free either.",
+    imageUrl: "https://i.ibb.co/Jz7BndR/money.jpg",
+    summary: "Adopting a dog is a considerable financial commitment as it includes feeding, grooming, and providing shelter for your pet. Owning a dog costs about $1,300 to $4,300 per year.",
+    articleLink: "https://www.cnbc.com/2020/02/26/how-to-know-if-you-can-afford-to-own-a-dog.html"
+  },
+  {
+    title: "Time Commitment",
+    heading: "You're busy.",
+    subheading: "We get it.",
+    imageUrl: "https://i.ibb.co/NV2zf6c/clock.jpg",
+    summary: "Dogs thrive on routine and require time and dedication. They typically need a consistent feeding, bathroom, exercise, and sleep schedule. Dogs are also happiest when you’re able to spend quality time with them!",
+    articleLink: "https://www.rover.com/blog/enough-time-care-new-dog/"
+  },
+  {
+    title: "Mental Burden",
+    heading: "A dog can be like a small child",
+    subheading: "...and that can get ruff.",
+    imageUrl: "https://i.ibb.co/MgZ157Z/stressed.jpg",
+    summary: "Adopting a pet might not always be the right choice for everyone. This study found that for some pet owners during the pandemic, the burden of caring for their pet actually decreased their wellbeing.",
+    articleLink: "https://onlinelibrary.wiley.com/doi/10.1111/avj.13102"
   }
 ]
 
@@ -456,7 +483,7 @@ const Home: NextPage = () => {
         </div>
       </div>
 
-      {/* Component for additional articles */}
+      {/* Component for benefits articles */}
       <div
         id="research"
         className="relative pt-16 pb-20 px-4 sm:px-6 lg:px-8 py-10 pad-section"
@@ -501,6 +528,59 @@ const Home: NextPage = () => {
         </div>
       </div>
 
+      {/* Component for challenges articles */}
+      
+      <div
+        id="research"
+        className="relative pt-16 pb-20 px-4 sm:px-6 lg:px-8 py-10 pad-section"
+      >
+        <div className="relative max-w-7xl mx-auto pad-section inset-0">
+          <div>
+            <div className="warning">
+                <img
+                className="h-20 w-20 xl:w-25 xl:h-25 warning-icon mr-4"
+                src={"https://i.ibb.co/gwGzpyv/warning-icon-png-2749.png"}
+                alt="Warning icon"
+              />
+              <h2 className="text-3xl font-bold ml-4 pad-section">
+                   Hold up — pets come with 
+                <span className="text-[#ff7931]"> challenges</span>
+              </h2>
+            </div>
+            <p className="mt-3 text-xl text-gray-800 sm:mt-4">
+              It's true! We'd be remiss if we didn't tell you about the costs too.
+            </p>
+          </div>
+          <div className="mt-12 max-w-lg mx-auto grid gap-5 lg:grid-cols-3 lg:max-w-none">
+            {costs.map((cost) => (
+              <div>
+                <h2 className="text-[#ff7931] article-title mb-4 text-xl" >{cost.title}</h2>
+                <div className="flex-1 bg-white p-6 flex flex-col justify-between rounded-lg shadow-lg overflow-hidden benefit-box" >
+                  <div
+                    key={cost.title}
+                    className="flex flex-col"
+                  >
+                  <div className="flex-1">
+                    <img
+                        className="object-cover img"
+                        src={cost.imageUrl}
+                        alt={cost.title}
+                    />
+                    <p className="text-xl mt-6 font-semibold text-gray-900">{cost.heading}</p>
+                    <p className="text-med mt-1 font-medium text-[#ff7931]">{cost.subheading}</p>
+                  </div>
+                      <div className="flex-shrink-0 mt-10 space-x-1 text-sm text-gray-500">
+                        <p>{cost.summary}</p>
+                      </div>
+                    </div>
+                    <a href={cost.articleLink} target="_blank" rel="noopener noreferrer" className="flex-shrink-0 space-x-1 text-xs learn-more">Learn More</a>
+              </div>
+              </div>
+            ))}
+          </div>
+        </div>
+      </div>
+
       {/* Component for adoption */}
       <div
         id="adopt"
@@ -514,7 +594,7 @@ const Home: NextPage = () => {
             <h2 className="dosis-font text-3xl tracking-tight font-extrabold text-gray-900 sm:text-4xl">
               Show me the real dogs!
             </h2>
-            <p className="titillium-web mt-4  text-gray-800 ">
+            <p className="mt-3 text-xl text-gray-800 sm:mt-4">
               Decided you definitely want some more puppy energy in your life? Here are some potential next steps to sniff out.
             </p>
           

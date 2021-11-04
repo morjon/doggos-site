@@ -130,3 +130,11 @@ p {
 .heading {
     border-bottom: 2px solid #761e0b;
 }
+
+.warning {
+    overflow: auto;
+}
+
+.warning-icon {
+    float: left;
+}
