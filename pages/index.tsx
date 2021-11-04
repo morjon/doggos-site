@@ -353,7 +353,7 @@ const Home: NextPage = () => {
                 <Image
                   src="/logo_pup_or_not.svg"
                   alt="Our logo"
-                  width={100}
+                  width={200}
                   height={80}
                 />
               </a>
@@ -520,17 +520,17 @@ const Home: NextPage = () => {
       {/* Component for adoption */}
       <div
         id="adopt"
-        className="relative pt-16 pb-20 px-4 sm:px-6 lg:pt-24 lg:pb-28 lg:px-8"
+        className="relative bg-[#761e0b] pt-16 pb-20 px-4 sm:px-6 lg:pt-24 lg:pb-28 lg:px-8"
       >
         <div className="absolute inset-0">
           <div className="h-1/3 sm:h-2/3" />
         </div>
         <div className="relative max-w-7xl mx-auto">
           <div className="pad-section">
-            <h2 className="dosis-font text-3xl tracking-tight font-extrabold text-gray-900 sm:text-4xl">
+            <h2 className="dosis-font text-3xl tracking-tight font-extrabold text-[#FFF2DC] text-gray-900 sm:text-4xl">
               Show me the real pups!
             </h2>
-            <p className="titillium-web mt-4  text-xl text-gray-800 ">
+            <p className="titillium-web mt-4  text-xl text-[#FFF2DC] text-gray-800 ">
               Decided you definitely want some more puppy energy in your life?
               Here are some potential next steps to sniff out.
             </p>
@@ -845,13 +845,13 @@ const Home: NextPage = () => {
       </div>
 
       {/* The About Me Component */}
-      <div id="about" className="bg-[#761e0b]">
+      <div id="about" className="bg-[#FFF2DC]">
         <div className="max-w-7xl mx-auto py-12 px-4 sm:px-6 lg:px-8 lg:py-24">
           <div className="space-y-12">
           <h2 className="text-[#ff7931] text-3xl font-extrabold tracking-tight sm:text-4xl">
                 About Us
               </h2>
-              <p className="text-xl text-white">
+              <p className="text-xl text-black ">
                 We are a team of Stanford Computer Science students excited to
                 share how relationships with animals can promote human
                 happiness. This project emerged from the course CS 247I: Design
@@ -872,9 +872,9 @@ const Home: NextPage = () => {
                       alt=""
                     />
                     <div className="space-y-2">
-                      <div className="text-lg leading-6 font-medium space-y-1 text-white">
+                      <div className="text-lg leading-6 font-medium space-y-1 text-[#ff7931]">
                         <h3>{person.name}</h3>
-                        <p className="text-[#ff7931]">{person.role}</p>
+                        <p className="text-black">{person.role}</p>
                       </div>
                       <ul
                         role="list"
