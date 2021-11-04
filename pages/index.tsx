@@ -239,7 +239,7 @@ const StyledTab = withStyles((theme: Theme) =>
 
 const useStyles = makeStyles((theme: Theme) => ({
   root: {
-    flexGrow: 1,
+    flexGrow: 2,
   },
   padding: {
     padding: theme.spacing(3),
@@ -383,8 +383,8 @@ const Home: NextPage = () => {
         <header className="py-10 pad-section">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pad-section">
             <h1 className="text-3xl font-bold text-white pad-section">
-              Pandemic puppy adoption{" "}
-              <span className="text-[#ff7931]">explained</span>
+              Test Drive a Dog{" "}
+              <span className="text-[#ff7931]"></span>
             </h1>
             <p className="titillium-web mt-4 text-white">
               During the COVID-19 pandemic, people turned to pets as a source of
@@ -511,7 +511,79 @@ const Home: NextPage = () => {
                   Item One
                 </TabPanel>
                 <TabPanel value={value} index={1}>
-                  Item Two
+                  <div className="low-com-box">
+                    <div >
+                      <span className="low-com-blurb"> Adopting a pup is not a decision that should be made lightly. Owning a dog represents
+                        an important commitment of time, money, and energy. Even if adopting isn't the right choice for you now, 
+                        <b> there are other ways to get the benefits and wellbeing boosts from some puppy love! </b> </span>
+                      
+                      <div className="card-container">
+
+                        <div className="flex flex-col rounded-lg shadow-lg overflow-hidden lim-width">
+                            <div className="flex-1 bg-white p-6 flex flex-col justify-between">
+                              <div className="flex-1">
+                                <p className="dosis text-xl font-bold text-[#ff7931]"> More Money, More Puppies </p>
+                                  <a className="block mt-2">
+                                    <p className="text-reg font-semibold text-gray-900">
+                                      You can boost your happiness and your bank account by walking and caring for dogs through 
+                                      several platforms.
+                                    </p>
+                                    <p className="mt-3 text-base text-gray-500">
+                                      text4
+                                    </p>
+                                  </a>
+                                </div>
+                              <div className="mt-6 flex items-center">
+                                <div className="flex-shrink-0">
+                                    <span className="sr-only">text5</span>
+                                </div>
+                              <div>
+                                <p className="text-sm font-medium text-gray-900">
+                                  <a  className="hover:underline"> text6 </a>
+                                </p>
+                              </div>
+                              
+                              </div>
+                            </div>
+                          </div>
+
+                          <div className="flex flex-col rounded-lg shadow-lg overflow-hidden lim-width">
+                            <div className="flex-1 bg-white p-6 flex flex-col justify-between">
+                              <div className="flex-1">
+                                <p className="dosis text-xl font-bold text-[#ff7931]"> Do Good, Feel Good </p>
+                                  <a className="block mt-2">
+                                    <p className="text-reg font-semibold text-gray-900">
+                                      Volunteer at a local pet shelter or with a rescue organization.
+                                    </p>
+                                    <p className="mt-3 text-base text-gray-500">
+                                      text4
+                                    </p>
+                                  </a>
+                                </div>
+                              <div className="mt-6 flex items-center">
+                                <div className="flex-shrink-0">
+                                    <span className="sr-only">text5</span>
+                                </div>
+                              <div>
+                                <p className="text-sm font-medium text-gray-900">
+                                  <a  className="hover:underline"> text6 </a>
+                                </p>
+                              </div>
+                              
+                              </div>
+                            </div>
+                          </div>
+
+
+
+
+                        </div>
+                        
+                        
+                    </div>
+                    <img className="stress-dog" src="https://i.ibb.co/myzpvLQ/stress-Dog.png" alt="Cartoon dog sitting down discussing stress science."/>
+                    
+                  </div>
                 </TabPanel>
                 {/* <TabPanel value={value} index={2}>
                   Item Three

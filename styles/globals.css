@@ -16,6 +16,37 @@ p {
     justify-content: end
 }
 
+.lim-width {
+    max-width: 45%;
+}
+
 .pad-section {
     padding-top: 3%;
+}
+
+.low-com-box {
+    margin-top: 1%;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    margin-left: 1%;
+}
+
+.stress-dog {
+    max-width: 30%;
+    height:fit-content;
+}
+
+.low-com-blurb {
+    max-width: 65%;
+    font-family: 'Titillium Web', sans-serif;
+    padding-bottom: 3%;
+}
+
+.card-container {
+    margin-top: 3%;
+    display: flex;
+    flex-direction: row;
+    max-width: 95%;
+    justify-content: space-evenly;
 }
