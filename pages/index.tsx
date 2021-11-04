@@ -22,7 +22,7 @@ import { SYMBOL_PREVIEW_DATA } from "next/dist/server/api-utils";
 
 const navigation = [
   { name: "Test Drive a Dog", href: "#explainer" },
-  { name: "The Research", href: "#research" },
+  { name: "Chew on the Research", href: "#research" },
   { name: "Find a Real Pup", href: "#adopt" },
   { name: "About Us", href: "#about" },
 ];
