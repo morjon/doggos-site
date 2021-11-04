@@ -15,3 +15,10 @@ p {
 .push {
     justify-content: end
 }
+
+.learn-more {
+    margin-left: auto; 
+    margin-right: 0;
+    text-decoration: underline #F8D59B;
+    text-emphasis-color: 0F1828;
+}

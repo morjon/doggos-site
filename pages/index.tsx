@@ -11,6 +11,33 @@ const navigation = [
   { name: "About Us", href: "#about" },
 ];
 
+const articles = [
+  {
+    title: "Mental Health",
+    heading: "Dogs enhance your psychological well-being.",
+    subheading: "...fur real.",
+    imageUrl: "/mental_health.png",
+    summary: "Pets are good for your mental health.",
+    articleLink: "https://time.com/collection/guide-to-happiness/4728315/science-says-pet-good-for-mental-health/"
+  },
+  {
+    title: "Physical Health",
+    heading: "Are you walking your dog...",
+    subheading: "or is your dog walking YOU?",
+    imageUrl: "",
+    summary: "Researchers have found that dog owners are more likely to reach their fitness goals, have a lower risk of diabetes (if they walk their dog regularly), and that dogs help encourage people to be more social.",
+    articleLink: "https://www.active.com/fitness/articles/are-dog-owners-healthier-people"
+  },
+  {
+    title: "Breeds for Different Needs",
+    heading: "Busy? Homebody? Stressed? Allergic?",
+    subheading: "We've got a dog for that!",
+    imageUrl: "",
+    summary: "",
+    articleLink: "https://pets.webmd.com/dogs/adoption-21/slideshow-best-dog-breed-for-your-health"
+  }
+]
+
 const incentives = [
   {
     name: "Chase away loneliness",
@@ -331,6 +358,41 @@ const Home: NextPage = () => {
                     </div>
                   </div>
                 </div>
+              </div>
+            ))}
+          </div>
+          <div className="mt-12 max-w-lg mx-auto grid gap-5 lg:grid-cols-3 lg:max-w-none">
+            {articles.map((article) => (
+              <div>
+              <h4 className="text-[#ff7931] justify-center" >{article.title}</h4>
+              <div className="bg-white p-6 flex flex-col justify-between rounded-lg shadow-lg overflow-hidden" >
+              <div className="flex-1">
+              <div
+                key={article.title}
+                className="flex flex-col"
+              >
+                <img
+                    className="object-cover"
+                    src={article.imageUrl}
+                    alt={article.title}
+                  />
+                <p className="text-xl font-semibold text-gray-900">{article.heading}</p>
+                <p className="text-sm font-medium text-[#ff7931]">{article.subheading}</p>
+                <div className="flex-shrink-0">
+                </div>
+                <div className="mt-6 flex items-center">
+                    <div>
+                      <div className="flex-shrink-0 space-x-1 text-sm text-gray-500">
+                        <p>{article.summary}</p>
+                      </div>
+                    </div>
+                  </div>
+                  <div className="learn-more">
+                    <a href={article.articleLink} target="_blank" rel="noopener noreferrer"><p>Learn More</p></a>
+                  </div>
+              </div>
+              </div>
+              </div>
               </div>
             ))}
           </div>
