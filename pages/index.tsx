@@ -113,7 +113,7 @@ const people = [
   {
     name: "Jonathan Morales",
     role: "B.S. Computer Science ‘22",
-    imageUrl: "https://i.ibb.co/CVPFk3n/gradphoto2-1.png",
+    imageUrl: "https://i.ibb.co/jzmkPsQ/jonathan.png",
   },
 ];
 
