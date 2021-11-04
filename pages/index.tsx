@@ -22,7 +22,7 @@ const navigation = [
 const articles = [
   {
     title: "Mental Health",
-    heading: "Dogs enhance your psychological well-being.",
+    heading: "Dogs enhance your well-being.",
     subheading: "...fur real.",
     imageUrl: "https://i.ibb.co/RbrKWDy/paw-3-1-1.png",
     summary: "Scientists have found that animals can help improve mental health, even for people with challenging disorders. Though the studies are small, the benefits are so impressive that animal-assisted clinical interventions have become increasingly common.",
@@ -452,7 +452,7 @@ const Home: NextPage = () => {
             {articles.map((article) => (
               <div>
                 <h2 className="text-[#ff7931] article-title mb-4 text-xl" >{article.title}</h2>
-                <div className="flex-1 bg-white p-6 flex flex-col justify-between rounded-lg shadow-lg overflow-hidden" >
+                <div className="flex-1 bg-white p-6 flex flex-col justify-between rounded-lg shadow-lg overflow-hidden benefit-box" >
                   <div
                     key={article.title}
                     className="flex flex-col"
@@ -469,10 +469,8 @@ const Home: NextPage = () => {
                       <div className="flex-shrink-0 mt-10 space-x-1 text-sm text-gray-500">
                         <p>{article.summary}</p>
                       </div>
-                      <div className="learn-more mt-2">
-                        <a href={article.articleLink} target="_blank" rel="noopener noreferrer"><p className="flex-shrink-0 space-x-1 text-xs">Learn More</p></a>
-                      </div>
                     </div>
+                    <a href={article.articleLink} target="_blank" rel="noopener noreferrer"><p className="flex-shrink-0 space-x-1 text-xs learn-more">Learn More</p></a>
               </div>
               </div>
             ))}

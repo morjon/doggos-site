@@ -17,8 +17,7 @@ p {
 }
 
 .learn-more {
-    margin-left: auto; 
-    margin-right: 0;
+    text-align: right;
     text-decoration: underline #F8D59B;
     text-emphasis-color: 0F1828;
 }
@@ -35,4 +34,8 @@ p {
     height: 100px;
     width: auto;
     margin: auto;
+}
+
+.benefit-box {
+    min-height: 400px;
 }
