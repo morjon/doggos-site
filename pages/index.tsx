@@ -23,6 +23,7 @@ const navigation = [
   { name: "Test Drive a Dog", href: "#explainer" },
   { name: "Chew on the Research", href: "#research" },
   { name: "Find a Real Pup", href: "#adopt" },
+  { name: "Print-and-Play Games", href: "#games" },
   { name: "About Us", href: "#about" },
 ];
 
@@ -931,6 +932,33 @@ const Home: NextPage = () => {
               </TabPanel>
               <Typography className={classes.padding} />
             </div>
+          </div>
+        </div>
+      </div>
+
+    {/* Component for print-and-play game */}
+
+    <div
+        id="games"
+        className="relative bg-[#F8D59B] pt-16 pb-20 px-4 sm:px-6 lg:pt-24 lg:pb-28 lg:px-8"
+      >
+        <div className="relative max-w-7xl mx-auto pad-section inset-0">
+          <div>
+            <div>
+              <h2 className="text-4xl font-bold pad-section">
+                Let's Play Some Games!
+              </h2>
+            </div>
+            <h3 className="text-3xl text-[#ff7931] font-bold pad-section">ADOPT OR FLOP</h3>
+            <p className="mt-3 mb-10 text-xl text-gray-800 sm:mt-4">
+                Learn more about dog adoption and which dog fits your personality best by playing our game! This is a competitive, 2-4 player, print-and-play board game. 
+            </p>
+            <div className="adoptorflop">
+              <iframe className="adoptorflop" src="/AdoptOrFlop-Print-n-Play.pdf" height="400" width="600"></iframe>
+              <p className="mt-3 text-l text-gray-800 sm:mt-4 center">Download the PDF for our game here, print, and get playing!</p>
+            </div>
+          </div>
+          <div className="mt-12 max-w-lg mx-auto grid gap-5 lg:grid-cols-3 lg:max-w-none">
           </div>
         </div>
       </div>

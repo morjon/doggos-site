@@ -138,3 +138,14 @@ p {
 .warning-icon {
     float: left;
 }
+
+.adoptorflop {
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: auto;
+    margin-top: 100;
+}
+
+.center {
+    text-align: center;
+}
