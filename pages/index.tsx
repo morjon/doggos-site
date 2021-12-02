@@ -949,7 +949,7 @@ const Home: NextPage = () => {
                 Let's Play Some Games!
               </h2>
             </div>
-            <h3 className="text-3xl text-[#ff7931] font-bold pad-section">ADOPT OR FLOP</h3>
+            <h3 className="text-3xl text-[#761e0b] font-bold pad-section">ADOPT OR FLOP</h3>
             <p className="mt-3 mb-10 text-xl text-gray-800 sm:mt-4">
                 Learn more about dog adoption and which dog fits your personality best by playing our game! This is a competitive, 2-4 player, print-and-play board game. 
             </p>
