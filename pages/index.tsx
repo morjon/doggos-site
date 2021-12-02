@@ -953,7 +953,7 @@ const Home: NextPage = () => {
             <p className="mt-3 mb-10 text-xl text-gray-800 sm:mt-4">
                 Learn more about dog adoption and which dog fits your personality best by playing our game! This is a competitive, 2-4 player, print-and-play board game. 
             </p>
-            <div className="adoptorflop">
+            <div>
               <iframe className="adoptorflop" src="/AdoptOrFlop-Print-n-Play.pdf" height="400" width="600"></iframe>
               <p className="mt-3 text-l text-gray-800 sm:mt-4 center">Download the PDF for our game here, print, and get playing!</p>
             </div>
