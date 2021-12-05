@@ -936,9 +936,8 @@ const Home: NextPage = () => {
         </div>
       </div>
 
-    {/* Component for print-and-play game */}
-
-    <div
+      {/* Component for print-and-play game */}
+      <div
         id="games"
         className="relative bg-[#F8D59B] pt-16 pb-20 px-4 sm:px-6 lg:pt-24 lg:pb-28 lg:px-8"
       >
@@ -949,17 +948,41 @@ const Home: NextPage = () => {
                 Let's Play Some Games!
               </h2>
             </div>
-            <h3 className="text-3xl text-[#761e0b] font-bold pad-section">ADOPT OR FLOP</h3>
+            <h3 className="text-3xl text-[#761e0b] font-bold pad-section">
+              ADOPT OR FLOP
+            </h3>
             <p className="mt-3 mb-10 text-xl text-gray-800 sm:mt-4">
-                Learn more about dog adoption and which dog fits your personality best by playing our game! This is a competitive, 2-4 player, print-and-play board game. 
+              Learn more about dog adoption and which dog fits your personality
+              best by playing our game! This is a competitive, 2-4 player,
+              print-and-play board game.
             </p>
             <div>
-              <iframe className="adoptorflop" src="/AdoptOrFlop-Print-n-Play.pdf" height="400" width="600"></iframe>
-              <p className="mt-3 text-l text-gray-800 sm:mt-4 center">Download the PDF for our game here, print, and get playing!</p>
+              <iframe
+                className="adoptorflop"
+                src="/AdoptOrFlop-Print-n-Play.pdf"
+                height="400"
+                width="600"
+              ></iframe>
+              <p className="mt-3 text-l text-gray-800 sm:mt-4 center">
+                Download the PDF for our game here, print, and get playing!
+              </p>
             </div>
           </div>
-          <div className="mt-12 max-w-lg mx-auto grid gap-5 lg:grid-cols-3 lg:max-w-none">
-          </div>
+          <h3 className="text-3xl text-[#761e0b] font-bold pad-section">
+            PupRush!
+          </h3>
+          <p className="mt-3 mb-10 text-xl text-gray-800 sm:mt-4">
+            Choose and adopt your favorite dog and compete against your friends
+            in a race to bond with them the quickest in this fast paced card
+            game!{" "}
+          </p>
+          <iframe
+            className="adoptorflop"
+            src="/puprush-print.pdf"
+            height="400"
+            width="600"
+          ></iframe>
+          <div className="mt-12 max-w-lg mx-auto grid gap-5 lg:grid-cols-3 lg:max-w-none"></div>
         </div>
       </div>
 
